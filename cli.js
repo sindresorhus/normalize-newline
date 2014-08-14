@@ -8,19 +8,20 @@ var input = argv._[0];
 
 function help() {
 	console.log([
-		pkg.description,
 		'',
-		'Usage',
-		'  $ normalize-newline <string>',
-		'  $ cat file.txt | normalize-newline',
+		'  ' + pkg.description,
 		'',
-		'Example',
-		'  $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt',
+		'  Usage',
+		'    normalize-newline <string>',
+		'    cat file.txt | normalize-newline',
+		'',
+		'  Example',
+		'    cat mixed-newlines.txt | normalize-newline > lf-newlines.txt',
 	].join('\n'));
 }
 
 function init(data) {
-	process.stdout.write(normalizeNewline(data));
+	process.stdout.write(normalizeNewline(data.toString()));
 }
 
 if (argv.help) {

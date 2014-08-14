@@ -4,13 +4,13 @@
   "description": "Normalize the newline characters of a string to `\\n`",
   "license": "MIT",
   "repository": "sindresorhus/normalize-newline",
-  "bin": {
-    "normalize-newline": "cli.js"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "normalize-newline": "cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -40,8 +40,8 @@
     "replace"
   ],
   "dependencies": {
-    "get-stdin": "^0.1.0",
-    "minimist": "^0.2.0"
+    "get-stdin": "^2.0.0",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "*"

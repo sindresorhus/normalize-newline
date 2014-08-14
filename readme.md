@@ -29,12 +29,12 @@ $ npm install --global normalize-newline
 ```sh
 $ normalize-newline --help
 
-Usage
-  $ normalize-newline <string>
-  $ cat file.txt | normalize-newline
+  Usage
+    normalize-newline <string>
+    cat file.txt | normalize-newline
 
-Example
-  $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt
+  Example
+    cat mixed-newlines.txt | normalize-newline > lf-newlines.txt
 ```
 
 
