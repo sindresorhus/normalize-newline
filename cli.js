@@ -21,7 +21,7 @@ function help() {
 }
 
 function init(data) {
-	process.stdout.write(normalizeNewline(data.toString()));
+	process.stdout.write(normalizeNewline(data));
 }
 
 if (argv.help) {
