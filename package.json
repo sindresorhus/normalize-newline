@@ -1,6 +1,6 @@
 {
   "name": "normalize-newline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Normalize the newline characters of a string to `\\n`",
   "license": "MIT",
   "repository": "sindresorhus/normalize-newline",
