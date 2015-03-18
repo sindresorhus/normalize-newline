@@ -30,11 +30,11 @@ $ npm install --global normalize-newline
 $ normalize-newline --help
 
   Usage
-    normalize-newline <string>
-    cat file.txt | normalize-newline
+    $ normalize-newline <string>
+    $ cat file.txt | normalize-newline
 
   Example
-    cat mixed-newlines.txt | normalize-newline > lf-newlines.txt
+    $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt
 ```
 
 

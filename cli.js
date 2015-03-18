@@ -1,46 +1,31 @@
 #!/usr/bin/env node
 'use strict';
 var stdin = require('get-stdin');
-var argv = require('minimist')(process.argv.slice(2));
-var pkg = require('./package.json');
+var meow = require('meow');
 var normalizeNewline = require('./');
-var input = argv._[0];
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  $ normalize-newline <string>',
+		'  $ cat file.txt | normalize-newline',
 		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    normalize-newline <string>',
-		'    cat file.txt | normalize-newline',
-		'',
-		'  Example',
-		'    cat mixed-newlines.txt | normalize-newline > lf-newlines.txt',
-	].join('\n'));
-}
+		'Example',
+		'  $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt',
+	].join('\n')
+});
 
 function init(data) {
 	process.stdout.write(normalizeNewline(data));
 }
 
-if (argv.help) {
-	help();
-	return;
-}
-
-if (argv.version) {
-	console.log(pkg.version);
-	return;
-}
-
 if (process.stdin.isTTY) {
-	if (!input) {
-		help();
-		return;
+	if (!cli.input[0]) {
+		console.error('Expected a string');
+		process.exit(1);
 	}
 
-	init(input);
+	init(cli.input[0]);
 } else {
 	stdin(init);
 }
