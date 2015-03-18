@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save normalize-newline
 ```
 
@@ -22,11 +22,11 @@ normalizeNewline('foo\r\nbar\nbaz');
 
 ## CLI
 
-```sh
+```
 $ npm install --global normalize-newline
 ```
 
-```sh
+```
 $ normalize-newline --help
 
   Usage
