@@ -11,8 +11,8 @@ var cli = meow({
 		'  $ cat file.txt | normalize-newline',
 		'',
 		'Example',
-		'  $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt',
-	].join('\n')
+		'  $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt'
+	]
 });
 
 function init(data) {
