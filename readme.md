@@ -13,10 +13,10 @@ $ npm install --save normalize-newline
 ## Usage
 
 ```js
-var normalizeNewline = require('normalize-newline');
+const normalizeNewline = require('normalize-newline');
 
 normalizeNewline('foo\r\nbar\nbaz');
-//=> foo\nbar\nbaz
+//=> 'foo\nbar\nbaz'
 ```
 
 
