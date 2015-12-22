@@ -1,6 +1,6 @@
 # normalize-newline [![Build Status](https://travis-ci.org/sindresorhus/normalize-newline.svg?branch=master)](https://travis-ci.org/sindresorhus/normalize-newline)
 
-> Normalize the [newline](http://en.wikipedia.org/wiki/Newline) characters of a string to `\n`
+> Normalize the [newline](http://en.wikipedia.org/wiki/Newline) characters in a string to `\n`
 
 
 ## Install
@@ -20,22 +20,9 @@ normalizeNewline('foo\r\nbar\nbaz');
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global normalize-newline
-```
-
-```
-$ normalize-newline --help
-
-  Usage
-    $ normalize-newline <string>
-    $ cat file.txt | normalize-newline
-
-  Example
-    $ cat mixed-newlines.txt | normalize-newline > lf-newlines.txt
-```
+- [normalize-newline-cli](https://github.com/sindresorhus/normalize-newline-cli) - CLI for this module
 
 
 ## License

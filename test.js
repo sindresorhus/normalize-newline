@@ -1,9 +1,8 @@
-'use strict';
-var assert = require('assert');
-var normalizeNewline = require('./');
+import test from 'ava';
+import fn from './';
 
-it('should normalize the newline character to lf', function () {
-	assert.equal(normalizeNewline('foo\r\nbar\r\nbaz\n'), 'foo\nbar\nbaz\n');
-	assert.equal(normalizeNewline('foo\nbar\nbaz\r\n'), 'foo\nbar\nbaz\n');
-	assert.equal(normalizeNewline('foo\nbar\n'), 'foo\nbar\n');
+test(t => {
+	t.is(fn('foo\r\nbar\r\nbaz\n'), 'foo\nbar\nbaz\n');
+	t.is(fn('foo\nbar\nbaz\r\n'), 'foo\nbar\nbaz\n');
+	t.is(fn('foo\nbar\n'), 'foo\nbar\n');
 });
