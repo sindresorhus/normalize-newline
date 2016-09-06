@@ -23,6 +23,17 @@ normalizeNewline(new Buffer('foo\r\nbar\nbaz')).toString();
 ```
 
 
+## API
+
+### normalizeNewline(input)
+
+#### input
+
+Type: `string` `Buffer` 
+
+Input to normalize.
+
+
 ## Related
 
 - [normalize-newline-cli](https://github.com/sindresorhus/normalize-newline-cli) - CLI for this module
