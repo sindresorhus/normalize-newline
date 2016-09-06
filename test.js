@@ -8,4 +8,5 @@ test(t => {
 	t.is(new Buffer(fn('foo\r\nbar\r\nbaz\n')).toString(), 'foo\nbar\nbaz\n');
 	t.is(new Buffer(fn('foo\nbar\nbaz\r\n')).toString(), 'foo\nbar\nbaz\n');
 	t.is(new Buffer(fn('foo\nbar\n')).toString(), 'foo\nbar\n');
+	t.throws(fn.bind(null, 1), 'Expected a `string` or a `Buffer`, got `number`');
 });
