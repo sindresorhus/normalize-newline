@@ -1,23 +1,23 @@
 'use strict';
-var CRLF = '\r\n';
+const CRLF = '\r\n';
 
-var replaceBuf = function (buf) {
-	var i = buf.indexOf(CRLF);
+const replaceBuf = buf => {
+	const i = buf.indexOf(CRLF);
 
 	if (i === -1) {
 		return buf;
 	}
 
-	var start = buf.slice(0, i);
-	var end = replaceBuf(buf.slice(i + CRLF.length));
-	var len = i + start.length + end.length;
+	const start = buf.slice(0, i);
+	const end = replaceBuf(buf.slice(i + CRLF.length));
+	const len = i + start.length + end.length;
 
 	return Buffer.concat([start, '\n', end], len);
 };
 
-module.exports = function (x) {
+module.exports = x => {
 	if (typeof x !== 'string' && !Buffer.isBuffer(x)) {
-		throw new TypeError('Expected a `string` or a `Buffer`, got `' + (typeof x) + '`');
+		throw new TypeError(`Expected a \`string\` or a \`Buffer\`, got \`${typeof x}\``);
 	}
 
 	return Buffer.isBuffer(x) ? replaceBuf(x) : x.replace(new RegExp(CRLF, 'g'), '\n');
