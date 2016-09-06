@@ -17,7 +17,7 @@ var replaceBuf = function (buf) {
 
 module.exports = function (x) {
 	if (typeof x !== 'string' && !Buffer.isBuffer(x)) {
-		throw new TypeError('Expected a string or a buffer');
+		throw new TypeError('Expected a `string` or a `Buffer`, got `' + (typeof x) + '`');
 	}
 
 	return Buffer.isBuffer(x) ? replaceBuf(x) : x.replace(new RegExp(CRLF, 'g'), '\n');
