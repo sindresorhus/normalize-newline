@@ -17,7 +17,21 @@ const normalizeNewline = require('normalize-newline');
 
 normalizeNewline('foo\r\nbar\nbaz');
 //=> 'foo\nbar\nbaz'
+
+normalizeNewline(new Buffer('foo\r\nbar\nbaz')).toString();
+//=> 'foo\nbar\nbaz'
 ```
+
+
+## API
+
+### normalizeNewline(input)
+
+#### input
+
+Type: `string` `Buffer` 
+
+Input to normalize.
 
 
 ## Related
