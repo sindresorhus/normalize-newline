@@ -32,6 +32,9 @@
     "convert",
     "replace"
   ],
+  "dependencies": {
+    "replace-buffer": "^1.0.0"
+  },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
