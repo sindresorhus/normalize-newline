@@ -1,14 +1,12 @@
-# normalize-newline [![Build Status](https://travis-ci.org/sindresorhus/normalize-newline.svg?branch=master)](https://travis-ci.org/sindresorhus/normalize-newline)
+# normalize-newline [![Build Status](https://travis-ci.com/sindresorhus/normalize-newline.svg?branch=master)](https://travis-ci.com/sindresorhus/normalize-newline)
 
-> Normalize the [newline](http://en.wikipedia.org/wiki/Newline) characters in a string to `\n`
-
+> Normalize the [newline](https://en.wikipedia.org/wiki/Newline) characters in a string to `\n`
 
 ## Install
 
 ```
-$ npm install --save normalize-newline
+$ npm install normalize-newline
 ```
-
 
 ## Usage
 
@@ -18,10 +16,9 @@ const normalizeNewline = require('normalize-newline');
 normalizeNewline('foo\r\nbar\nbaz');
 //=> 'foo\nbar\nbaz'
 
-normalizeNewline(new Buffer('foo\r\nbar\nbaz')).toString();
+normalizeNewline(Buffer.from('foo\r\nbar\nbaz')).toString();
 //=> 'foo\nbar\nbaz'
 ```
-
 
 ## API
 
@@ -29,16 +26,10 @@ normalizeNewline(new Buffer('foo\r\nbar\nbaz')).toString();
 
 #### input
 
-Type: `string` `Buffer` 
+Type: `string | Buffer`
 
 Input to normalize.
-
 
 ## Related
 
 - [normalize-newline-cli](https://github.com/sindresorhus/normalize-newline-cli) - CLI for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

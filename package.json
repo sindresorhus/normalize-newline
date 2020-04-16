@@ -1,45 +1,43 @@
 {
-  "name": "normalize-newline",
-  "version": "3.0.0",
-  "description": "Normalize the newline characters in a string to `\\n`",
-  "license": "MIT",
-  "repository": "sindresorhus/normalize-newline",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "newline",
-    "linebreak",
-    "line",
-    "lf",
-    "crlf",
-    "eol",
-    "linefeed",
-    "character",
-    "char",
-    "normalize",
-    "convert",
-    "replace"
-  ],
-  "dependencies": {
-    "replace-buffer": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "normalize-newline",
+	"version": "3.0.0",
+	"description": "Normalize the newline characters in a string to `\\n`",
+	"license": "MIT",
+	"repository": "sindresorhus/normalize-newline",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"newline",
+		"linebreak",
+		"line",
+		"lf",
+		"crlf",
+		"eol",
+		"linefeed",
+		"character",
+		"char",
+		"normalize",
+		"convert",
+		"replace"
+	],
+	"dependencies": {
+		"replace-buffer": "^1.0.0"
+	},
+	"devDependencies": {
+		"ava": "^2.0.0",
+		"xo": "^0.29.1"
+	}
 }

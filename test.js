@@ -1,12 +1,15 @@
 import test from 'ava';
-import m from './';
+import normalizeNewline from '.';
 
-test(t => {
-	t.is(m('foo\r\nbar\r\nbaz\n'), 'foo\nbar\nbaz\n');
-	t.is(m('foo\nbar\nbaz\r\n'), 'foo\nbar\nbaz\n');
-	t.is(m('foo\nbar\n'), 'foo\nbar\n');
-	t.is(m(Buffer.from('foo\r\nbar\r\nbaz\n')).toString(), 'foo\nbar\nbaz\n');
-	t.is(m(Buffer.from('foo\nbar\nbaz\r\n')).toString(), 'foo\nbar\nbaz\n');
-	t.is(m(Buffer.from('foo\nbar\n')).toString(), 'foo\nbar\n');
-	t.throws(m.bind(null, 1), 'Expected a `string` or a `Buffer`, got `number`');
+test('main', t => {
+	t.is(normalizeNewline('foo\r\nbar\r\nbaz\n'), 'foo\nbar\nbaz\n');
+	t.is(normalizeNewline('foo\nbar\nbaz\r\n'), 'foo\nbar\nbaz\n');
+	t.is(normalizeNewline('foo\nbar\n'), 'foo\nbar\n');
+	t.is(normalizeNewline(Buffer.from('foo\r\nbar\r\nbaz\n')).toString(), 'foo\nbar\nbaz\n');
+	t.is(normalizeNewline(Buffer.from('foo\nbar\nbaz\r\n')).toString(), 'foo\nbar\nbaz\n');
+	t.is(normalizeNewline(Buffer.from('foo\nbar\n')).toString(), 'foo\nbar\n');
+
+	t.throws(() => {
+		normalizeNewline(1);
+	}, 'Expected a `string` or a `Buffer`, got `number`');
 });
