@@ -1,4 +1,4 @@
-# normalize-newline [![Build Status](https://travis-ci.com/sindresorhus/normalize-newline.svg?branch=master)](https://travis-ci.com/sindresorhus/normalize-newline)
+# normalize-newline
 
 > Normalize the [newline](https://en.wikipedia.org/wiki/Newline) characters in a string to `\n`
 
