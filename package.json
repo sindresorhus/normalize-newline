@@ -10,8 +10,10 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=10"
+		"node": ">=12"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -34,10 +36,10 @@
 		"replace"
 	],
 	"dependencies": {
-		"replace-buffer": "^1.0.0"
+		"replace-buffer": "^1.2.1"
 	},
 	"devDependencies": {
-		"ava": "^2.0.0",
-		"xo": "^0.29.1"
+		"ava": "^3.15.0",
+		"xo": "^0.38.2"
 	}
 }

@@ -1,5 +1,5 @@
 import test from 'ava';
-import normalizeNewline from '.';
+import normalizeNewline from './index.js';
 
 test('main', t => {
 	t.is(normalizeNewline('foo\r\nbar\r\nbaz\n'), 'foo\nbar\nbaz\n');
@@ -11,5 +11,7 @@ test('main', t => {
 
 	t.throws(() => {
 		normalizeNewline(1);
-	}, 'Expected a `string` or a `Buffer`, got `number`');
+	}, {
+		message: 'Expected a `string` or a `Buffer`, got `number`'
+	});
 });
