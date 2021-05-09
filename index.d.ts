@@ -1,5 +1,6 @@
 /**
 Normalize the newline characters in a string to `\n`.
+
 @example
 ```
 import normalizeNewline from 'normalize-newline';
