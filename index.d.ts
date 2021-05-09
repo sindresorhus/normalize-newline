@@ -11,5 +11,6 @@ normalizeNewline(Buffer.from('foo\r\nbar\nbaz')).toString();
 //=> 'foo\nbar\nbaz'
 ```
 */
-export function normalizeNewline(input: string): string;
-export function normalizeNewline(input: Buffer): Buffer;
+declare function normalizeNewline(input: string): string;
+declare function normalizeNewline(input: Buffer): Buffer;
+export default normalizeNewline;
