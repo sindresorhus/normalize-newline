@@ -36,9 +36,6 @@
 		"convert",
 		"replace"
 	],
-	"dependencies": {
-		"replace-buffer": "^1.2.1"
-	},
 	"devDependencies": {
 		"ava": "^3.15.0",
 		"tsd": "^0.14.0",

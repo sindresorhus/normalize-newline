@@ -2,6 +2,8 @@
 
 > Normalize the [newline](https://en.wikipedia.org/wiki/Newline) characters in a string to `\n`
 
+Converts Windows-style CRLF (`\r\n`) line endings to Unix-style LF (`\n`). Works in both Node.js and browsers.
+
 ## Install
 
 ```
@@ -16,7 +18,9 @@ import normalizeNewline from 'normalize-newline';
 normalizeNewline('foo\r\nbar\nbaz');
 //=> 'foo\nbar\nbaz'
 
-normalizeNewline(Buffer.from('foo\r\nbar\nbaz')).toString();
+const uint8Array = new TextEncoder().encode('foo\r\nbar\nbaz');
+const normalized = normalizeNewline(uint8Array);
+new TextDecoder().decode(normalized);
 //=> 'foo\nbar\nbaz'
 ```
 
@@ -24,9 +28,11 @@ normalizeNewline(Buffer.from('foo\r\nbar\nbaz')).toString();
 
 ### normalizeNewline(input)
 
+Normalizes CRLF (`\r\n`) to LF (`\n`). Other newline characters (`\r` or `\n` alone) are left unchanged.
+
 #### input
 
-Type: `string | Buffer`
+Type: `string | Uint8Array`
 
 Input to normalize.
 
