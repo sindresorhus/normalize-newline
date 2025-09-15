@@ -6,8 +6,8 @@ Converts Windows-style CRLF (`\r\n`) line endings to Unix-style LF (`\n`). Works
 
 ## Install
 
-```
-$ npm install normalize-newline
+```sh
+npm install normalize-newline
 ```
 
 ## Usage

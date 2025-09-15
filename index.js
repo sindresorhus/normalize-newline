@@ -4,7 +4,7 @@ const LINE_FEED = 10; // \n
 
 export default function normalizeNewline(input) {
 	if (typeof input === 'string') {
-		return input.replace(CRLF_REGEX, '\n');
+		return input.replaceAll(CRLF_REGEX, '\n');
 	}
 
 	if (input instanceof Uint8Array) {
